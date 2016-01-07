@@ -1,2 +1,18 @@
-<!-- this is where a user can edit their profile -->
-<!-- functionality: edit information, update their info in the database and show properly on their profile page -->
+
+
+<h1> Edit Your Account Info! </h1>
+
+<%= form_for @user, html: {method: :put} do |f| %>
+<%= f.label :username %>
+<%= f.text_field :username %>
+<br>
+<br>
+<%= f.label :password %>
+<%= f.password_field :password %>
+<br>
+<br>
+<%= f.label :email %>
+<%= f.text_field :email %>
+<br>
+<%= f.submit :update %>
+<% end %>
