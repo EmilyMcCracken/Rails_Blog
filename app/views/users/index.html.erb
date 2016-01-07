@@ -1,0 +1,7 @@
+<!-- this page will list all of our current users -->
+<!-- functionality: click on a user's profile to view it -->
+
+<% @users.each do |user| %>
+	<%= content_tag :p, user.username %>
+	<%= tag :br %>
+<% end %>
