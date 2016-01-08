@@ -5,12 +5,9 @@ class ProfilesController < ApplicationController
 
   def create
     puts "***** TESTING CREATING A NEW PROFILE!"
- # set variable to create new user using params set on /new page
     @profile = Profile.new(profile_params)
- # save the user that was created
     @profile.save
- # redirect to the newly create user's profile page /show
-    redirect_to 
+    redirect_to root_path
   end
 
   def show
@@ -22,5 +19,11 @@ class ProfilesController < ApplicationController
   end
 
   def update
+  end
+
+    private
+
+    def profile_params
+    params.require(:profile).permit(:fname, :lname, :favbird, :bio)   
   end
 end

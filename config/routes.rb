@@ -1,16 +1,8 @@
 Rails.application.routes.draw do
-  get 'profiles/new'
-
-  get 'profiles/create'
-
-  get 'profiles/show'
-
-  get 'profiles/edit'
-
-  get 'profiles/update'
 
   resources :users
   resources :posts
+  resources :profiles
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
