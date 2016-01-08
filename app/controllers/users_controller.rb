@@ -24,6 +24,7 @@ class UsersController < ApplicationController
   	redirect_to user_path @user
   end
 
+# created Profiles model and controller so no longer have a need for editing profile information through the User controller
 #   def edit
 #  # set the variable to find a specific user by user_id
 #   	@user = User.find(params[:id])
@@ -48,7 +49,7 @@ class UsersController < ApplicationController
 # redirect to /index 
 	redirect_to root_path
 	end
-
+# set strong params for security
 	private
 
     def user_params

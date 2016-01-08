@@ -1,0 +1,21 @@
+<%= content tag :h1, "Create Your Profile!" %>
+
+<%= form_for @profile do |f| %>
+<%= f.label :First_Name %>
+<%= f.text_field :fname %>
+<br>
+<br>
+<%= f.label :Last_Name %>
+<%= f.text_field :lname %>
+<br>
+<br>
+<%= f.label :Favorite_Bird %>
+<%= f.text_field :favbird %>
+<br>
+<br>
+<%= f.label :Bio %>
+<%= f.text_field :bio %>
+<br>
+<br>
+<%= f.submit :create %>
+<% end %>
