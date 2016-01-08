@@ -1,5 +1,3 @@
-<%= content tag :h1, "User Profile Page" %>
-
 <%= @user.username %>
 <%= tag :br %>
 <%= @user.email %> 
@@ -15,3 +13,5 @@
 <%= @profile.bio %>
 <%= tag :br %>
 <%= tag :br %>
+
+<%= link_to("Sign Out", '/logout', method: :delete) %>

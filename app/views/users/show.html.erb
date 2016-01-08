@@ -1,4 +1,4 @@
-<h1> Profile Page </h1>
+<h1> User Profile Page </h1>
 
 <%= @user.username %>
 <%= tag :br %>
@@ -6,4 +6,15 @@
 <%= tag :br %>
 <%= @user.zipcode %>
 <%= tag :br %>
+<%= @user.profile.fname %>
 <%= tag :br %>
+<%= @user.profile.lname %>
+<%= tag :br %>
+<%= @user.profile.favbird %>
+<%= tag :br %>
+<%= @user.profile.bio %>
+<%= tag :br %>
+<%= tag :br %>
+
+
+<%= link_to("Sign Out", '/logout', method: :delete) %>

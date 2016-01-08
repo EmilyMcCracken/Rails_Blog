@@ -1,0 +1,10 @@
+<%= content_tag :h1, "POSTS" %>
+<% @posts.each do |post| %>
+	User: <%= post.user.username if post.user %>
+	<%= tag :br %>
+	Title: <%= link_to post.title, post_path(post.id) %>
+	<%= tag :br %>
+	Post: <%= post.body %>
+	<%= tag :br %>
+	<%= tag :br %>
+<% end %>

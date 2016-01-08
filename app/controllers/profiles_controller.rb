@@ -4,14 +4,16 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    puts "***** TESTING CREATING A NEW PROFILE!"
     @profile = Profile.new(profile_params)
-    @profile.save
+    @user = current_user
+    @profile.save 
+    @user.profile = @profile
+
     redirect_to root_path
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = current_user
     @profile = Profile.find(params[:id])
   end
 
