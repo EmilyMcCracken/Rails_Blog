@@ -24,20 +24,20 @@ class UsersController < ApplicationController
   	redirect_to user_path @user
   end
 
-  def edit
- # set the variable to find a specific user by user_id
-  	@user = User.find(params[:id])
-  end
+#   def edit
+#  # set the variable to find a specific user by user_id
+#   	@user = User.find(params[:id])
+#   end
 
-  def update
-  	puts "******** TEST UPDATING USER"
- # set variable to find a specific user by user_id
-	@user = User.find(params[:id])
-# update user info using attributes passed through update function
-	@user.update_attributes(params[:user])
-# redirect to newly updated user's profile page  
-	redirect_to user_path @user
-	end
+#   def update
+#   	puts "******** TEST UPDATING USER"
+#  # set variable to find a specific user by user_id
+# 	@user = User.find(params[:id])
+# # update user info using attributes passed through update function
+# 	@user.update_attributes(params[:user])
+# # redirect to newly updated user's profile page  
+# 	redirect_to user_path @user
+# 	end
 
 	def destroy
 	puts "***** TESTING DELETING USER"

@@ -5,11 +5,11 @@ class SessionsController < ApplicationController
 
 	def create
 		puts "TEST: LOGGING IN *****************"
-		 @user = User.where(username: params[:username]).first      
-		 if @user && @user.password == params[:password]       
+		 @user = User.where(username: params[:username]).first     
+		 if @user and @user.password == params[:password]       
 		 session[:user_id] = @user.id
+		 redirect_to @user
 		 flash[:notice] = "Hey Birder! You're logged in.. cool profile, by the way"
-		 redirect_to user_path @user
 		else
 			flash[:notice] = "Well this is hawkward... something went wrong. Please try again!"
 			redirect_to login_path
@@ -25,5 +25,6 @@ class SessionsController < ApplicationController
 			redirect_to root_path
 		end
 	end
+
 
 end
