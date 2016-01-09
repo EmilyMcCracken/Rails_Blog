@@ -7,6 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<header>
+		<%= image_tag("logo_burned.png", class: "header_logo") %>
+		<%= image_tag("birderz.png", class: "header_name") %>
+	</header>
+
 	<%= flash[:notice] if flash[:notice] %> 
 	<%= flash[:alert] if flash[:alert] %>
 
