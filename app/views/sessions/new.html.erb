@@ -1,9 +1,16 @@
-<h1> Login to your Account! </h1>
-
-    <%= form_tag("/login", method: "post") do %>   
-    <%=label_tag(:username, "Username:") %>   
-    <%=text_field_tag(:username) %> 
-    <%=label_tag(:password, "Password") %>   
-    <%=password_field_tag(:password) %>    
-    <%=submit_tag("Submit") %> 
-    <% end %>
+<%= content_tag :div, class: 'login_form_img' do -%>
+<%= content_tag :div, class: 'login_form_bg' do -%>
+<%= content_tag :div, class: 'login_title' do -%>
+	log in
+<% end -%>
+<div class="login_box">
+    <%= form_tag("/login", method: "post") do %>    
+    <%= text_field_tag(:username, nil, :class => 'login_form_top', :placeholder => 'Username') %> 
+    <%= tag :br %>
+    <%= password_field_tag(:password, nil, :class => 'login_form_bottom', :placeholder => 'Password') %>
+    <%= tag :br %>  
+    <%= submit_tag "log in", :class => 'login_button' %>
+</div>
+<% end -%>
+<% end -%>
+<% end %>
