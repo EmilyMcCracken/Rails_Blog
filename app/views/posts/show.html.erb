@@ -3,6 +3,15 @@
 <%= @posts.body %>
 <%= tag :br %>
 
+<% @posts.comments.each do |comment| %>
+	<%= content_tag :h3, "Comment Title"%>
+	<%= comment.title %>
+	<%= content_tag :h3, "Comment Body" %>
+	<%= comment.body %>
+	<%= content_tag :h3, " Comment Author" %>
+	<%= comment.user.username %>
+	<% end %>
+
 <%= form_for @comment do |f| %>
 <%= f.label :Title %>
 <%= f.text_field :title %>
@@ -10,6 +19,7 @@
 <br>
 <%= f.label :body %>
 <%= f.text_field :body %>
+<%= f.hidden_field :post_id, :value => @posts.id %>
 <br>
 <br>
 <%= f.submit :create %>

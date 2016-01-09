@@ -7,7 +7,6 @@ class PostsController < ApplicationController
 		@posts = Post.find(params[:id])
 		@comment = Comment.new
 		@user = current_user
-	
 	end
 
 	def new

@@ -1,15 +1,22 @@
 class CommentsController < ApplicationController
+	def index
+		@comment = Comments.all
+	end
+
+	def show
+		@comment = Comment.find(paramas[:id])
+	end
+
 	def new
 		@comment = Comment.new
 	end
 
 	def create
 		@comment = Comment.new(comment_params)
-		@user = current_user
-		@comment.user_id = @user.id
+		@comment.user_id = session[:user_id]
 		@comment.post_id = params[:comment][:post_id]
     	@comment.save 
-  		redirect_to post_path
+  		redirect_to posts_path 
 	end
 
 	private
