@@ -10,9 +10,9 @@
 <%= f.text_field :email, :class => 'sign_up_form', :placeholder => 'Email' %>
 <%= f.text_field :zipcode, :class => 'sign_up_form_bottom', :placeholder => 'Zipcode' %>
 <%= tag :br  %>
-<%= f.submit :create, :class => 'sign_up_create_button' %>
+<%= f.submit :create, :class => 'sign_up_create_button', :value => "Sign Up" %>
 <%= content_tag :div, class: 'sign_in_button_div' do -%>
-<%= link_to("sign in", '/login', method: :get, :class => 'sign_in_button') %>
+<%= link_to("Log In", '/login', method: :get, :class => 'sign_in_button') %>
 <% end -%>
 </div>
 <% end -%>
