@@ -13,10 +13,8 @@
 	text-align: center;
 	padding: 3px;
 	height: 100px;
-	word-wrap: inherit;
+	word-wrap: normal;
 }
-
-
 
 .comment_box {
 	width: auto;
@@ -40,6 +38,7 @@
 	font-size: 50px;
 	text-align: center;
 	font-family: 'Architects Daughter', cursive;
+	word-wrap: normal;
 }
 
 .comment_form_bg {
@@ -52,6 +51,7 @@
 	padding-bottom: 25px;
 	background-color: #BFF0D1;
 	clear: both;
+	word-wrap: normal;
 }
 
 .comment_form_img {
