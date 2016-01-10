@@ -1,16 +1,14 @@
-<h1> Edit Your Account Info! </h1>
-
-<%= form_for @user, html: {method: :put} do |f| %>
-<%= f.label :username %>
-<%= f.text_field :username %>
-<br>
-<br>
-<%= f.label :password %>
-<%= f.password_field :password %>
-<br>
-<br>
-<%= f.label :email %>
-<%= f.text_field :email %>
-<br>
+<br><br>
+<%= content_tag :h1, "Edit Your Profile" %>
+<%= content_tag :h3, "Beak quick about it so you can get back to birding!"
+<%= form_for @profile do |f| %>
+<%= f.label :First_name %>
+<%= f.text_field :fname %>
+<%= f.label :Last_name %>
+<%= f.text_field :lname %>
+<%= f.label :Favorite_Bird! %>
+<%= f.text_field :favbird %>
+<%= f.label :BIO %>
+<%= f.text_field :bio %>
 <%= f.submit :update %>
 <% end %>

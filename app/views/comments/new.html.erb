@@ -1,11 +1,16 @@
+<%= content_tag :div, class: 'comment_form_img' do -%>
+<%= content_tag :div, class: 'comment_form_bg' do -%>
+<%= content_tag :div, class: 'comment_title' do -%>
+	New Comment
+<% end -%>
+<%= content_tag :div, class: 'comment_box' do -%>
 <%= form_for @comment do |f| %>
-<%= f.label :Title %>
-<%= f.text_field :title %>
-<br>
-<br>
-<%= f.label :body %>
-<%= f.text_field :body %>
-<br>
-<br>
-<%= f.submit :create %>
+<%= f.text_field :title, :class => 'new_comment_title', :placeholder => "Title" %>
+<%= tag :br %>
+<%= f.text_field :body, :class => 'new_comment_body', :placeholder => "Body" %>
+<%= tag :br %>
+<%= f.submit :create, :class => 'new_comment_button', :value => "New Comment" %>
+<% end -%>
 <% end %>
+<% end -%>
+<% end -%>

@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RailsBlogProject</title>
+  <title>Birderz</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+	<link rel="shortcut icon" href="http://i.imgur.com/NFeljhr.png">
 </head>
 <body>
+	<header>
+		<ul id="drop-nav">
+		  <li><%= link_to "Home", posts_path %></li>
+		  <li><%= link_to "Account", " " %>
+			<ul>
+		      <li><%= link_to "Sign Up", root_path %></li>
+		      <li><%= link_to "Login", '/login' %></li>
+		    </ul>
+		  </li>
+		  <li><%= link_to "User", "" %>
+		    <ul>
+		    <li><%= link_to "My Profile", user_path(@current_user.id) %></li>
+		      <li><%= link_to "New Post", new_post_path %></li>
+		      <li><%= link_to "Edit Profile", root_path %></li>
+		    </ul>
+		</ul>
+		<%= image_tag("logo_burned.png", class: "header_logo") %>
+		<%= image_tag("birderz.png", class: "header_name") %>
+	</header>
+
 	<%= flash[:notice] if flash[:notice] %> 
 	<%= flash[:alert] if flash[:alert] %>
 

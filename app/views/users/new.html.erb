@@ -1,21 +1,20 @@
-<h1> Wanna Join This Super Cool Blog?? </h1>
-
+<%= content_tag :div, class: 'sign_up_form_img' do -%>
+<%= content_tag :div, class: 'sign_up_form_bg' do -%>
+<%= content_tag :div, class: 'landing_title' do -%>
+	birderz
+<% end -%>
+<div class="sign_up_box">
 <%= form_for @user do |f| %>
-<%= f.label :username %>
-<%= f.text_field :username %>
-<br>
-<br>
-<%= f.label :password %>
-<%= f.password_field :password %>
-<br>
-<br>
-<%= f.label :email %>
-<%= f.text_field :email %>
-<br>
-<br>
-<%= f.label :zipcode %>
-<%= f.text_field :zipcode %>
-<br>
-<br>
-<%= f.submit :create %>
+<%= f.text_field :username, :class => 'sign_up_form_top', :placeholder => 'Username' %>
+<%= f.password_field :password, :class => 'sign_up_form', :placeholder => 'Password' %>
+<%= f.text_field :email, :class => 'sign_up_form', :placeholder => 'Email' %>
+<%= f.text_field :zipcode, :class => 'sign_up_form_bottom', :placeholder => 'Zipcode' %>
+<%= tag :br  %>
+<%= f.submit :create, :class => 'sign_up_create_button', :value => "Sign Up" %>
+<%= content_tag :div, class: 'sign_in_button_div' do -%>
+<%= link_to("Log In", '/login', method: :get, :class => 'sign_in_button') %>
+<% end -%>
+</div>
+<% end -%>
+<% end -%>
 <% end %>
