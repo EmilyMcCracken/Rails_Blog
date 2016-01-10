@@ -62,13 +62,66 @@
 	margin-left: -8px;
 }
 
+.post_form_img_home {
+	background-color: #EAD7AD;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100%;
+	z-index: -1000;
+	margin-top: -8px;
+	margin-left: -8px;
+}
 
+.home_box_bg {
+	width: 900px;
+	background-color: #BFF0D1;
+	margin: 0 auto;
+	padding: 5px;
+	margin-top: 5%;
+	border: 2px #FFFFDB solid;
+	border-top-left-radius: 45px;
+	border-bottom-right-radius: 45px;
+	text-align: center;
+	margin-bottom: 3%;
+}
 
+.home_box_title {
+	font-family: 'Architects Daughter', cursive;
+	font-size: 35px;
+	border-bottom: 1px #FFFFDB solid;
+}
 
+.home_post_box_container {
+	width: 700px;
+	margin: 0 auto;
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
 
+.home_post_box_indv {
+	border: 2px #384253 solid;
+	border-top-left-radius: 45px;
+	border-bottom-right-radius: 45px;
+	padding: 5px;
+	margin-top: 3%;
+	background-color: #FFFFD9;
+	font-family: Helvetica;
+	color: #384253;
+}
 
+.home_post_box_title {
+	border-bottom: 1px #384253 solid;
+	font-size: 30px;
+}
 
+.home_post_box_title a {
+	text-decoration: none;
+	color: #384253;
+}
 
-
-
+.home_post_box_title a:hover {
+	text-decoration: underline;
+	color: #E45755;
+}
 
