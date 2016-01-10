@@ -10,24 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+
+
  */
 
- .header_logo {
- 	width: 15%;
- 	transform: rotate(5deg);
- 	margin-bottom: 10px;
- 	margin-left: 600px;
- }
-
-.header_name {
-	width: 35%;
-	padding-bottom: 40px;
-}
-
- header {
- 	border: 10px  #384252  solid;
- 	background-color: #E25858 ;
-
- }
