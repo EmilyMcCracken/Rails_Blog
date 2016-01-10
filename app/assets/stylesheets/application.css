@@ -18,7 +18,7 @@
  	width: 15%;
  	transform: rotate(5deg);
  	margin-bottom: 10px;
- 	margin-left: 600px;
+ 	margin-left: 370px;
  }
 
 .header_name {
@@ -28,8 +28,71 @@
 
  header {
  	border: 10px  #384252  solid;
+ 	background-color: #E25858;
  	background-color: #E25858 ;
 	margin-top: -8px;
 	margin-left: -8px;
 	width: 100%;
  }
+
+ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+  
+ul li {
+	display: block;
+	position: relative;
+	float: left;
+	border: 1px solid #384252;
+}
+  
+li ul {
+	display: none;
+}
+  
+ul li a {
+	display: block;
+	background: #384252;
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+    white-space: nowrap;
+    color: #fff;
+    font-family: 'Architects Daughter', cursive;
+}
+
+ul li a:hover {
+	background: #C0EFD2;
+	color: black;
+}
+  
+li:hover ul {
+	display: block; 
+	position: absolute;
+}
+  
+li:hover li {
+	float: none;
+}
+  
+li:hover a {
+	background: #C0EFD2;
+	color: black;
+}
+  
+li:hover li a:hover {
+	background: #C0EFD2;
+	color: black;
+}
+  
+#drop-nav li ul li {
+	border-top: 0px;
+}
+
+
+
+
+
+
+

@@ -22,6 +22,7 @@
 <%= f.text_field :title, :class => 'new_comment_title', :placeholder => "Title" %>
 <%= tag :br %>
 <%= f.text_field :body, :class => 'new_comment_body', :placeholder => "Body" %>
+<%= f.hidden_field :post_id, :value => @posts.id %>
 <%= tag :br %>
 <%= f.submit :create, :class => 'new_comment_button', :value => "New Comment" %>
 <% end -%>

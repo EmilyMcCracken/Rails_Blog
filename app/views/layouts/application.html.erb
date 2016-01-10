@@ -11,6 +11,21 @@
 </head>
 <body>
 	<header>
+		<ul id="drop-nav">
+		  <li><%= link_to "Home", posts_path %></li>
+		  <li><%= link_to "Account", " " %>
+			<ul>
+		      <li><%= link_to "Sign Up", root_path %></li>
+		      <li><%= link_to "Login", '/login' %></li>
+		    </ul>
+		  </li>
+		  <li><%= link_to "User", " " %>
+		    <ul>
+		    <li><%= link_to "My Profile", root_path %></li>
+		      <li><%= link_to "New Post", new_post_path %></li>
+		      <li><%= link_to "Edit Profile", root_path %></li>
+		    </ul>
+		</ul>
 		<%= image_tag("logo_burned.png", class: "header_logo") %>
 		<%= image_tag("birderz.png", class: "header_name") %>
 	</header>
