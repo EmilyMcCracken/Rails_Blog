@@ -1,3 +1,74 @@
-// Place all the styles related to the Posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.new_post_title {
+	font-size: 25px;
+	border-top-left-radius: 25px;
+	border: 1px grey solid;
+	text-align: center;
+	padding: 3px;
+}
+
+.new_post_body {
+	font-size: 25px;
+	border-bottom-right-radius: 25px;
+	border: 1px grey solid;
+	text-align: center;
+	padding: 3px;
+	height: 100px;
+}
+
+.post_box {
+	width: auto;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.new_post_button {
+	width: 9vw;
+	background-color: #E45755;
+	color: #FFFFDB;
+	border: none;
+	border-radius: 25px;
+	margin-top: 15px;
+	font-family: Helvetica neue;
+	font-size: 15px;
+	padding: 0;
+}
+
+.post_title {
+	font-size: 50px;
+	text-align: center;
+	font-family: 'Architects Daughter', cursive;
+}
+
+.post_form_bg {
+	padding-top: 25px;
+	border: 2px solid black;
+	border-radius: 20px;
+	width: 350px;
+	margin: 0 auto;
+	margin-top: 15%;
+	padding-bottom: 25px;
+	background-color: #BFF0D1;
+}
+
+.post_form_img {
+	background-image: url(birdheadbob.gif);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: -1000;
+	margin-top: -8px;
+	margin-left: -8px;
+}
+
+
+
+
+
+
+
+
+
+
+
