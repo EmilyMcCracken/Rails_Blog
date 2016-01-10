@@ -14,3 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+// var birds = ['birdonbranch.jpeg', 'birdsfighting.jpg', 'cranes.jpg', 'rainbowbird.jpeg', 'whitebird.jpeg'];
+// $('html').css({'background-image': 'url(' + birds[Math.floor(Math.random() * birds.length)] + ')'});

@@ -1,3 +1,95 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.sign_up_form_top {
+	font-size: 25px;
+	border-top-left-radius: 25px;
+	border: 1px grey solid;
+	text-align: center;
+	padding: 3px;
+}
+
+.sign_up_form {
+	border: 1px grey solid;
+	font-size: 25px;
+	text-align: center;
+	padding: 3px;
+}
+
+.sign_up_form_bottom {
+	font-size: 25px;
+	border-bottom-right-radius: 25px;
+	border: 1px grey solid;
+	text-align: center;
+	padding: 3px;
+}
+
+.sign_up_box {
+	width: auto;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.sign_up_create_button {
+	width: 9vw;
+	background-color: #E45755;
+	color: #FFFFDB;
+	border: none;
+	border-radius: 25px;
+	margin-top: 15px;
+	font-family: Helvetica neue;
+	font-size: 15px;
+	padding: 0;
+}
+
+.sign_in_button_div {
+	width: 9vw;
+	background-color: #E45755;
+	border-radius: 25px;
+	margin-top: 15px;
+	display: inline-block;
+}
+
+.sign_in_button {
+	color: #FFFFDB;
+	text-decoration: none;
+	font-family: Helvetica neue;
+	font-size: 15px;
+}
+
+.landing_title {
+	font-size: 50px;
+	text-align: center;
+	font-family: 'Architects Daughter', cursive;
+}
+
+.sign_up_form_bg {
+	padding-top: 25px;
+	border: 2px solid black;
+	border-radius: 20px;
+	width: 350px;
+	margin: 0 auto;
+	margin-top: 15%;
+	padding-bottom: 25px;
+	background-color: #BFF0D1;
+}
+
+.sign_up_form_img {
+	background-image: url(birdheadbob.gif);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: -1000;
+	margin-top: -8px;
+	margin-left: -8px;
+}
+
+
+
+
+
+
+
+
+
+
+
