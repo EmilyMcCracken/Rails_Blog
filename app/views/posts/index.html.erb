@@ -1,3 +1,4 @@
+<%= content_tag :div, class: 'post_form_img' do -%>
 <%= content_tag :h1, "POSTS" %>
 <% @posts.each do |post| %>
 	User: <%= post.user.username if post.user %>
@@ -8,3 +9,4 @@
 	<%= tag :br %>
 	<%= tag :br %>
 <% end %>
+<% end -%>
