@@ -7,7 +7,7 @@ All Posts
 <% @posts.each do |post| %>
 <%= content_tag :div, class: 'home_post_box_indv' do -%>
 <%= content_tag :div, class: 'home_post_box_title' do -%>
-	<%= post.user.username if post.user %> ---
+	<%= link_to post.user.username, user_path(post.user.id) %> ---
 	<%= link_to post.title, post_path(post.id) %>
 	<% end -%>
 	Post: <%= post.body %>
