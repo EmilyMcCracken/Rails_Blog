@@ -1,28 +1,35 @@
-<h1> User Profile Page </h1>
-
+<%= content_tag :div, class: 'users_show_img' do -%>
+<%= content_tag :div, class: 'users_show_username' do -%>
 <%= @user.username %>
+<% end -%>
+<%= content_tag :div, class: 'users_three_box' do -%>
+<%= content_tag :div, class: 'users_show_info' do -%>
+ - <%= @user.email %> 
 <%= tag :br %>
-<%= @user.email %> 
+ - <%= @user.zipcode %>
 <%= tag :br %>
-<%= @user.zipcode %>
-<%= tag :br %>
-<%= @user.profile.fname %>
-<%= tag :br %>
-<%= @user.profile.lname %>
-<%= tag :br %>
-<%= @user.profile.favbird %>
-<%= tag :br %>
-<%= @user.profile.bio %>
-<%= tag :br %>
-<%= tag :br %>
+ - <%= @user.profile.fname %>
 
-
-<%= link_to("Sign Out", '/logout', method: :delete) %>
-
+ - <%= @user.profile.lname %>
+<%= tag :br %>
+ - <%= @user.profile.favbird %>
+<% end -%>
+<%= content_tag :div, class: 'users_show_bio' do -%>
+ - <%= @user.profile.bio %>
+<% end -%>
+<%= content_tag :div, class: 'users_show_own_posts' do -%>
 <% @posts.each do |post| %>
-	Title: <%= link_to post.title, post_path(post.id) %>
+<%= content_tag :div, class: 'users_own_posts_format' do -%>
+<%= content_tag :div, class: 'users_own_posts_format_title' do -%>
+	<%= link_to post.title, post_path(post.id) %>
+<% end -%>
+	 - <%= post.body %>
 	<%= tag :br %>
-	Post: <%= post.body %>
-	<%= tag :br %>
-	<%= tag :br %>
-<% end %>
+	<% end -%>
+	<% end %>
+<% end -%>
+<% end -%>
+<%= content_tag :div, class: 'users_show_sign_out' do -%>
+	<%= link_to("Sign Out", '/logout', method: :delete) %>
+<% end -%>
+<% end -%>
