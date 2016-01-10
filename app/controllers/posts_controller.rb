@@ -7,6 +7,7 @@ class PostsController < ApplicationController
 		@posts = Post.find(params[:id])
 		@comment = Comment.new
 		@user = current_user
+		@comment_post = Comment.where(params[:post_id])
 	end
 
 	def new

@@ -12,28 +12,19 @@
 <body>
 	<header>
 		<ul id="drop-nav">
-		  <li><a href="#">Home</a></li>
-		  <li><a href="#">User Options</a>
+		  <li><%= link_to "Home", posts_path %></li>
+		  <li><%= link_to "Account", " " %>
 			<ul>
-		      <li><a href="#">HTML</a></li>
-		      <li><a href="#">CSS</a></li>
-		      <li><a href="#">JavaScript</a></li>
+		      <li><%= link_to "Sign Up", root_path %></li>
+		      <li><%= link_to "Login", '/login' %></li>
 		    </ul>
 		  </li>
-		  <li><a href="#">Posts</a>
+		  <li><%= link_to "User", " " %>
 		    <ul>
-		      <li><a href="#">Joomla</a></li>
-		      <li><a href="#">Drupal</a></li>
-		      <li><a href="#">WordPress</a></li>
-		      <li><a href="#">Concrete 5</a></li>
+		    <li><%= link_to "My Profile", root_path %></li>
+		      <li><%= link_to "New Post", new_post_path %></li>
+		      <li><%= link_to "Edit Profile", root_path %></li>
 		    </ul>
-		  </li>
-		  <li><a href="#">Profile</a>
-		    <ul>
-		      <li><a href="#">General Inquiries</a></li>
-		      <li><a href="#">Ask me a Question</a></li>
-		    </ul>
-		  </li>
 		</ul>
 		<%= image_tag("logo_burned.png", class: "header_logo") %>
 		<%= image_tag("birderz.png", class: "header_name") %>
