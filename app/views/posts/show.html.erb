@@ -1,16 +1,28 @@
 <%= content_tag :div, class: 'comment_form_img' do -%>
 <%= content_tag :div, class: 'post_to_comment' do -%>
+<%= content_tag :div, class: 'post_to_comment_title' do -%>
 <%= @posts.title %>
-<%= tag :br %>
+<% end -%>
+<%= content_tag :div, class: 'post_to_comment_body' do -%>
 <%= @posts.body %>
+<% end -%>
 <% end -%>
 <%= content_tag :div, class: 'other_comments' do -%>
 <% @posts.comments.each do |comment| %>
+<%= content_tag :div, class: 'small_comment_title' do -%>
 	<%= comment.title %>
 	<%= tag :br %>
+	<% end -%>
+	<%= content_tag :div, class: 'small_comment_body' do -%>
 	<%= comment.body %>
+	<% end -%>
 	<%= tag :br %>
-	<%= comment.user.username %>
+	<%= tag :br %>
+<%= content_tag :div, class: 'username_comment' do -%>
+-	<%= comment.user.username %>
+<% end -%>
+	<%= tag :br %>
+	<%= tag :br %>
 <% end %>
 <% end -%>
 <%= content_tag :div, class: 'comment_form_bg' do -%>
