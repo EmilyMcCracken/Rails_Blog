@@ -1,12 +1,20 @@
-<%= content_tag :div, class: 'post_form_img' do -%>
-<%= content_tag :h1, "POSTS" %>
+<%= content_tag :div, class: 'post_form_img_home' do -%>
+<%= content_tag :div, class: 'home_box_bg' do -%>
+<%= content_tag :div, class: 'home_box_title' do -%>
+All Posts
+<% end -%>
+<%= content_tag :div, class: 'home_post_box_container' do -%>
 <% @posts.each do |post| %>
-	User: <%= post.user.username if post.user %>
-	<%= tag :br %>
-	Title: <%= link_to post.title, post_path(post.id) %>
-	<%= tag :br %>
+<%= content_tag :div, class: 'home_post_box_indv' do -%>
+<%= content_tag :div, class: 'home_post_box_title' do -%>
+	<%= post.user.username if post.user %> ---
+	<%= link_to post.title, post_path(post.id) %>
+	<% end -%>
 	Post: <%= post.body %>
 	<%= tag :br %>
 	<%= tag :br %>
-<% end %>
+	<% end %>
+<% end -%>
+<% end -%>
+<% end -%>
 <% end -%>
