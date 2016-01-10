@@ -15,3 +15,11 @@
 <%= tag :br %>
 
 <%= link_to("Sign Out", '/logout', method: :delete) %>
+
+<% @posts.each do |post| %>
+	Title: <%= link_to post.title, post_path(post.id) %>
+	<%= tag :br %>
+	Post: <%= post.body %>
+	<%= tag :br %>
+	<%= tag :br %>
+<% end %>
