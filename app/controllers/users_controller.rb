@@ -9,6 +9,7 @@ class UsersController < ApplicationController
  # set variable to find user by user_id
   	@user = User.find(params[:id])
     @posts = @user.posts
+    @current_user = User.find(session[:user_id])
 
   end
 
@@ -59,6 +60,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:username, :password, :email, :zipcode)   
 	end
-  def login
-  end
+ 
 end
