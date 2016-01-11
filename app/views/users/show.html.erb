@@ -4,18 +4,20 @@
 <% end -%>
 <%= content_tag :div, class: 'users_three_box' do -%>
 <%= content_tag :div, class: 'users_show_info' do -%>
- - <%= @user.email %> 
+ <%= content_tag :h3, "USER INFO:" %>
+ Email: <%= @user.email %> 
 <%= tag :br %>
- - <%= @user.zipcode %>
+Zipcode: <%= @user.zipcode %>
 <%= tag :br %>
- - <%= @user.profile.fname %>
-
- - <%= @user.profile.lname %>
+ First Name: <%= @user.profile.fname %>
 <%= tag :br %>
- - <%= @user.profile.favbird %>
+Last Name: <%= @user.profile.lname %>
+<%= tag :br %>
+Favorite Bird: <%= @user.profile.favbird %>
 <% end -%>
 <%= content_tag :div, class: 'users_show_bio' do -%>
- - <%= @user.profile.bio %>
+ <%= tag :br %>
+ <%= @user.profile.bio %>
 <% end -%>
 <%= content_tag :div, class: 'users_show_own_posts' do -%>
 <% @posts.each do |post| %>
