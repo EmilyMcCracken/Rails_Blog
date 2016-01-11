@@ -25,7 +25,7 @@
 		    <li><%= link_to "My Profile", user_path(@current_user.id) %></li>
 		    <% end %>
 		      <li><%= link_to "New Post", new_post_path %></li>
-<!-- 		      <li><%= link_to "Edit Profile", root_path %></li> -->
+			  <li><%= link_to "Edit Profile", edit_profile_path(@current_user.profile.id) %></li>
 		    </ul>
 		</ul>
 		<%= image_tag("logo_burned.png", class: "header_logo") %>
