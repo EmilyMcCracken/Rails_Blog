@@ -16,12 +16,10 @@ Last Name: <%= @user.profile.lname %>
 Favorite Bird: <%= @user.profile.favbird %>
 <% end -%>
 <%= content_tag :div, class: 'users_show_bio' do -%>
- <%= content_tag :h3, "BIO:" %>
  <%= tag :br %>
  <%= @user.profile.bio %>
 <% end -%>
 <%= content_tag :div, class: 'users_show_own_posts' do -%>
- <%= content_tag :h3, "POSTS:" %>
 <% @posts.each do |post| %>
 <%= content_tag :div, class: 'users_own_posts_format' do -%>
 <%= content_tag :div, class: 'users_own_posts_format_title' do -%>
