@@ -1,19 +1,16 @@
+<%= content_tag :div, class: 'bio_form_img' do -%>
+<%= content_tag :div, class: 'bio_form_bg' do -%>
+<%= content_tag :div, class: 'bio_title' do -%>
+Profile
+<% end -%>
 <%= form_for @profile do |f| %>
-<%= f.label :First_Name %>
-<%= f.text_field :fname %>
-<br>
-<br>
-<%= f.label :Last_Name %>
-<%= f.text_field :lname %>
-<br>
-<br>
-<%= f.label :Favorite_Bird %>
-<%= f.text_field :favbird %>
-<br>
-<br>
-<%= f.label :Bio %>
-<%= f.text_field :bio %>
-<br>
-<br>
-<%= f.submit :create %>
+<%= content_tag :div, class: 'bio_box' do -%>
+<%= f.text_field :fname, :class => 'bio_form_top', :placeholder => 'First Name' %>
+<%= f.text_field :lname, :class => 'bio_form_middle', :placeholder => 'Last Name' %>
+<%= f.text_field :favbird, :class => 'bio_form_middle', :placeholder => 'Favorite Bird' %>
+<%= f.text_field :bio, :class => 'bio_form_bottom', :placeholder => 'Bio' %>
+<%= f.submit :create, :class => 'bio_button', :value => 'Create Profile' %>
+<% end -%>
 <% end %>
+<% end -%>
+<% end -%>

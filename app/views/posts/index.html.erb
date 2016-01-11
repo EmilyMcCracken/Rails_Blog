@@ -10,7 +10,7 @@ All Posts
 	<%= link_to post.user.username, user_path(post.user.id) %> ---
 	<%= link_to post.title, post_path(post.id) %>
 	<% end -%>
-	Post: <%= post.body %>
+	<%= post.body %>
 	<%= tag :br %>
 	<%= tag :br %>
 	<% end %>
