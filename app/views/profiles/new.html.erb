@@ -1,18 +1,14 @@
 <%= form_for @profile do |f| %>
-<%= f.label :First_Name %>
-<%= f.text_field :fname %>
+<%= f.text_field :fname, :class => 'bio_form_top', :placeholder => 'First Name' %>
 <br>
 <br>
-<%= f.label :Last_Name %>
-<%= f.text_field :lname %>
+<%= f.text_field :lname, :class => 'bio_form_middle', :placeholder => 'Last Name' %>
 <br>
 <br>
-<%= f.label :Favorite_Bird %>
-<%= f.text_field :favbird %>
+<%= f.text_field :favbird, :class => 'bio_form_middle', :placeholder => 'Favorite Bird' %>
 <br>
 <br>
-<%= f.label :Bio %>
-<%= f.text_field :bio %>
+<%= f.text_field :bio, :class => 'bio_form_bottom', :placeholder => 'Bio' %>
 <br>
 <br>
 <%= f.submit :create %>
