@@ -176,6 +176,44 @@
 	text-decoration: none;
 }
 
+.users_show_edit_profile {
+	background-color: #E45755;
+	font-size: 25px;
+	font-family: Helvetica;
+	width: 200px;
+	padding: 20px;
+	clear: both;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 35px;
+	border-top-left-radius: 45px;
+	border-bottom-right-radius: 45px;
+}
+
+.users_show_edit_profile a {
+	color: white;
+	text-decoration: none;
+}
+
+.users_show_delete_user {
+	background-color: #E45755;
+	font-size: 25px;
+	font-family: Helvetica;
+	width: 200px;
+	padding: 20px;
+	clear: both;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 35px;
+	border-top-left-radius: 45px;
+	border-bottom-right-radius: 45px;
+}
+
+.users_show_delete_user a {
+	color: white;
+	text-decoration: none;
+}
+
 .users_own_posts_format {
 	border-bottom: 1px solid #384253;
 }

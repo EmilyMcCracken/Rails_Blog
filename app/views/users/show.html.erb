@@ -35,7 +35,12 @@ Favorite Bird: <%= @user.profile.favbird %>
 <% if @current_user.id == @user.id  %>
 <%= content_tag :div, class: 'users_show_sign_out' do -%>
 	<%= link_to("Sign Out", '/logout', method: :delete) %>
-	
+<%= content_tag :div, class: 'users_show_edit_profile' do -%>
+	<%= link_to("Edit Profile", '/logout', method: :get) %>
+<%= content_tag :div, class: 'users_show_delete_user' do -%>
+	<%= link_to("Delete User", '/logout', method: :delete) %>
+<% end -%>
+<% end -%>
 <% end %>
 <% end -%>
 <% end -%>
