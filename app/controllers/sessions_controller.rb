@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
 		if current_user
 			session[:user_id] = nil
 			# session.clear
-			flash[:notice] = "Goodbye, Birder!"
+			flash[:notice] = "Bye, Bye Birdie!!"
 			redirect_to root_path
 		end
 	end

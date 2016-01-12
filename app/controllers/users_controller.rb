@@ -30,20 +30,6 @@ class UsersController < ApplicationController
   end
 
 # created Profiles model and controller so no longer have a need for editing profile information through the User controller
-#   def edit
-#  # set the variable to find a specific user by user_id
-#   	@user = User.find(params[:id])
-#   end
-
-#   def update
-#   	puts "******** TEST UPDATING USER"
-#  # set variable to find a specific user by user_id
-# 	@user = User.find(params[:id])
-# # update user info using attributes passed through update function
-# 	@user.update_attributes(params[:user])
-# # redirect to newly updated user's profile page  
-# 	redirect_to user_path @user
-# 	end
 
 	def destroy
 	puts "***** TESTING DELETING USER"
@@ -51,6 +37,9 @@ class UsersController < ApplicationController
 	@user = User.find(params[:id])
 # delete user from database upon clicking link in /show
 	@user.destroy
+# end session so the current_user method stops looking for their id
+  session[:user_id] = nil
+
 # redirect to /index 
 	redirect_to root_path
 	end
