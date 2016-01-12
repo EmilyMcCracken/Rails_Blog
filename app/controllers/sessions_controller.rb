@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
 # flash notice that their login was successful
 		 flash[:notice] = "Hey Birder! You're logged in.. cool profile, by the way"
 		else
-# if it doesn't work, flash notice that it was wrong and redirect to login again
+# 			if it doesn't work, flash notice that it was wrong and redirect to login again
 			flash[:notice] = "Well this is hawkward... something went wrong. Please try again!"
 			redirect_to login_path
 		end
@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
 		if current_user
 			session[:user_id] = nil
 			# session.clear
-			flash[:notice] = "You have been logged out.. see ya later, Birder!"
+			flash[:notice] = "Goodbye, Birder!"
 			redirect_to root_path
 		end
 	end

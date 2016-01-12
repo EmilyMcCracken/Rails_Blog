@@ -19,21 +19,22 @@
 		      <li><%= link_to "Login", '/login' %></li>
 		    </ul>
 		  </li>
+		   <% if @current_user != nil && @current_user.profile != nil %>
 		  <li><%= link_to "User", "" %>
-		    <ul>
-		    <% if @current_user != nil %>
+		    <ul>   
 		    <li><%= link_to "My Profile", user_path(@current_user.id) %></li>
-		    <% end %>
-		      <li><%= link_to "New Post", new_post_path %></li>
 			  <li><%= link_to "Edit Profile", edit_profile_path(@current_user.profile.id) %></li>
+			    <li><%= link_to "New Post", new_post_path %></li>
 		    </ul>
+		    <% end %>
 		</ul>
 		<%= image_tag("logo_burned.png", class: "header_logo") %>
 		<%= image_tag("birderz.png", class: "header_name") %>
 	</header>
-
+	<div class="flash_notice">
 	<%= flash[:notice] if flash[:notice] %> 
 	<%= flash[:alert] if flash[:alert] %>
+	</div>
 
 <%= yield %>
 
