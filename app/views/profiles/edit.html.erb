@@ -1,14 +1,17 @@
-<br><br>
-<%= content_tag :h1, "Edit Your Profile" %>
-<%= content_tag :h3, "Beak quick about it so you can get back to birding!" %>
+<%= content_tag :div, class: 'bio_form_img' do -%>
+<%= content_tag :h3, "Beak quick about it so you can get back to birding!", class: 'beak_quick_about_it' %>
+<%= content_tag :div, class: 'bio_form_bg_edit' do -%>
+<%= content_tag :div, class: 'bio_title' do -%>
+Edit Profile
+<% end -%>
 <%= form_for @profile do |f| %>
-<%= f.label :First_name %>
-<%= f.text_field :fname %>
-<%= f.label :Last_name %>
-<%= f.text_field :lname %>
-<%= f.label :Favorite_Bird! %>
-<%= f.text_field :favbird %>
-<%= f.label :BIO %>
-<%= f.text_field :bio %>
-<%= f.submit :update %>
+<%= content_tag :div, class: 'bio_box' do -%>
+<%= f.text_field :fname, :class => 'bio_form_top', :placeholder => 'First Name' %>
+<%= f.text_field :lname, :class => 'bio_form_middle', :placeholder => 'Last Name' %>
+<%= f.text_field :favbird, :class => 'bio_form_middle', :placeholder => 'Favorite Bird' %>
+<%= f.text_field :bio, :class => 'bio_form_bottom', :placeholder => 'Bio' %>
+<%= f.submit :create, :class => 'bio_button', :value => 'Edit Profile' %>
+<% end -%>
 <% end %>
+<% end -%>
+<% end -%>
